@@ -4,7 +4,7 @@ describe Applicant do
   subject(:new_applicant) { described_class.new }
 
   it 'must except record without settings' do
-    expect(Applicant.create).to be(true)
+    expect(Applicant.create.id).to_not be(nil)
   end
 
   describe '#order' do
